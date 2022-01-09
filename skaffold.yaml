@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta4
+kind: Config
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+  - context: .
+    image: gke-nodeapp
+deploy:
+  kubectl:
+    manifests:
+    - manifests/helloweb-deployment.yaml
+    - manifests/helloweb-ingress-tls.yaml
