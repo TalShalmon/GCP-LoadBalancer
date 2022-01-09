@@ -5,24 +5,11 @@ import (
 	"log"
 	"net/http"
 	"os"
-	// "time"	
-//	"github.com/gin-gonic/gin"
-//	"gopkg.in/mgo.v2"
-	//"gopkg.in/mgo.v2/bson"
 )
 
 
 func main() {
-	log.Printf("started")
-//	uri := fmt.Sprintf("mongodb://tal:tal@104.197.29.173:27017/test&authorization=disabled")
-//	session, err := mgo.Dial(uri)
-//	log.Printf("dial")
-//	if err != nil {
-//		panic(err)
-//	}
-//	defer session.Close()
-//	log.Printf("close")
-	
+	log.Printf("started")	
 	port := "8443"
 	if fromEnv := os.Getenv("PORT"); fromEnv != "" {
 		port = fromEnv
