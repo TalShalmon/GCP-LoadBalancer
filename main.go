@@ -7,7 +7,6 @@ import (
 	"os"
 )
 
-
 func main() {
 	log.Printf("started")	
 	port := "8443"
