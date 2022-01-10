@@ -8,7 +8,14 @@ import (
 )
 
 func main() {
-	log.Printf("started")	
+	// Connection to mongo 
+	session, err := mgo.Dial("mongodb://tester:tester@104.197.29.173.mongodb.net/test")
+	log.Printf("dial")
+	if err != nil {
+		panic(err)
+	}
+	defer session.Close()	
+	
 	port := "8443"
 	if fromEnv := os.Getenv("PORT"); fromEnv != "" {
 		port = fromEnv
